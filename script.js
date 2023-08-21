@@ -7,6 +7,8 @@ let userName
 let userGuess
 let guesses = 0
 let user
+const min = 1
+const max = 20
 
 function playGame() {
   let guesses = 0
@@ -14,7 +16,7 @@ function playGame() {
   userName = prompt('What is your name?')
 
   //get random number
-  let computerNumber = Math.floor(Math.random() * (20 - 1 + 1) + 1)
+  let computerNumber = Math.floor(Math.random() * (max - min + min) + min)
 
   alert(computerNumber)
 
