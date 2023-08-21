@@ -14,7 +14,7 @@ function playGame() {
   userName = prompt('What is your name?')
 
   //get random number
-  let computerNumber = Math.floor(Math.random() * 20)
+  let computerNumber = Math.floor(Math.random() * (20 - 1 + 1) + 1)
 
   alert(computerNumber)
 
@@ -23,8 +23,13 @@ function playGame() {
     //get guess
     userGuess = prompt('What number do you guess?')
 
-    // see how many times it has taken
-    guesses = guesses + 1
+    //verifies guess
+    if (userGuess.match(/^([1-9]|1[0-9]|20)$/)) {
+      // see how many times it has taken
+      guesses = guesses + 1
+    } else {
+      alert('input not valid')
+    }
   }
 
   //show number of guesses
