@@ -20,7 +20,7 @@ function playGame() {
 
   // compare guess with number while loop
   while (computerNumber != userGuess) {
-    //get guess
+    //gets guess from user
     userGuess = prompt('What number do you guess?')
 
     //verifies guess
