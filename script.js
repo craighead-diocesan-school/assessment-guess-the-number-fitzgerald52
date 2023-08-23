@@ -63,7 +63,7 @@ function compareNumbers() {
 }
 
 function hotVsCold() {
-  // CHECK THE FIX DIFFERENCE FOR NO NEGATIVES
+  // comparees the difference between the number guessed and the real number and shows the user how far away they are
   if (difference == 0) {
     alert('yay !!!!')
   } else if (difference <= 2) {
