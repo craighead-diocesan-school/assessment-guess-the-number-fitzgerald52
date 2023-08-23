@@ -17,12 +17,15 @@ function playGame() {
   //asks for name, makes a random number from 1-20 and then continues to ask the user for a number until they guess the numver right
   guesses = 0
   playerName()
+  if (userName.match(/^[a-zA-Z]+$/)) {
+    randomNumber()
 
-  randomNumber()
+    compareNumbers()
 
-  compareNumbers()
-
-  score()
+    score()
+  } else {
+    alert('name not valid')
+  }
 }
 
 function playerName() {
