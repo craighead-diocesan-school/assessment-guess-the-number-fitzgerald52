@@ -7,6 +7,7 @@ userArray = [
 //variables used within both functions
 let userName
 let userGuess
+let computerNumber
 let guesses = 0
 let user
 const min = 1
@@ -14,14 +15,27 @@ const max = 20
 
 function playGame() {
   //asks for name, makes a random number from 1-20 and then continues to ask the user for a number until they guess the numver right
-  let guesses = 0
+  guesses = 0
+  playerName()
 
+  randomNumber()
+
+  compareNumbers()
+
+  score()
+}
+
+function playerName() {
   //get user name
   userName = prompt('What is your name?')
+}
 
+function randomNumber() {
   //get random number
-  let computerNumber = Math.floor(Math.random() * (max - min + min) + min)
+  computerNumber = Math.floor(Math.random() * (max - min + min) + min)
+}
 
+function compareNumbers() {
   //  runs code until the user guesses the number correct
   while (computerNumber != userGuess) {
     //gets guess from user
@@ -35,7 +49,9 @@ function playGame() {
       alert('input not valid')
     }
   }
+}
 
+function score() {
   //show number of guesses
   alert('you got the number correct after ' + guesses + ' guesses')
 
