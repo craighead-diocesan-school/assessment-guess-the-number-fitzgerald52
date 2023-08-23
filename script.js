@@ -52,13 +52,13 @@ function compareNumbers() {
     if (userGuess.match(/^([1-9]|1[0-9]|20)$/)) {
       // see how many guesses have been said
       guesses = guesses + 1
+      difference = computerNumber - userGuess
+      difference = Math.abs(difference)
+      // alert(difference)
+      hotVsCold()
     } else {
       alert('input not valid')
     }
-    difference = computerNumber - userGuess
-    difference = Math.abs(difference)
-    // alert(difference)
-    hotVsCold()
   }
 }
 
