@@ -7,11 +7,13 @@ userArray = [
 //variables used within both functions
 let userName
 let userGuess
+userGuess = Number(userGuess)
 let computerNumber
 let guesses = 0
 let user
 const min = 1
 const max = 20
+let difference = 0
 
 function playGame() {
   //asks for name, makes a random number from 1-20 and then continues to ask the user for a number until they guess the numver right
@@ -40,7 +42,9 @@ function randomNumber() {
 
 function compareNumbers() {
   //  runs code until the user guesses the number correct
+  // alert(computerNumber)
   while (computerNumber != userGuess) {
+    difference = 0
     //gets guess from user
     userGuess = prompt('What number do you guess?')
 
@@ -51,6 +55,27 @@ function compareNumbers() {
     } else {
       alert('input not valid')
     }
+    difference = computerNumber - userGuess
+    difference = Math.abs(difference)
+    // alert(difference)
+    hotVsCold()
+  }
+}
+
+function hotVsCold() {
+  // CHECK THE FIX DIFFERENCE FOR NO NEGATIVES
+  if (difference == 0) {
+    alert('yay !!!!')
+  } else if (difference <= 2) {
+    alert('boiling')
+  } else if (difference <= 5) {
+    alert('hot')
+  } else if (difference <= 9) {
+    alert('warm')
+  } else if (difference <= 14) {
+    alert('cold')
+  } else if (difference >= 15) {
+    alert('freezing')
   }
 }
 
