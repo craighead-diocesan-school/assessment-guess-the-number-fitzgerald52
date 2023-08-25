@@ -33,6 +33,7 @@ function playGame() {
 function playerName() {
   //get user name
   userName = prompt('What is your name?')
+  userName = userName.trim()
 }
 
 function randomNumber() {
