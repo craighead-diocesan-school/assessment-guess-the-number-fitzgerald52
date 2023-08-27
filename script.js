@@ -43,19 +43,17 @@ function randomNumber() {
 
 function compareNumbers() {
   //  runs code until the user guesses the number correct
-  // alert(computerNumber)
   while (computerNumber != userGuess) {
     difference = 0
     //gets guess from user
     userGuess = prompt('What number do you guess?')
 
-    //verifies guess
+    //verifies user guess
     if (userGuess.match(/^([1-9]|1[0-9]|20)$/)) {
       // see how many guesses have been said
       guesses = guesses + 1
       difference = computerNumber - userGuess
       difference = Math.abs(difference)
-      // alert(difference)
       hotVsCold()
     } else {
       alert('input not valid')
@@ -86,9 +84,7 @@ function score() {
 
   //combines user information
   user = {
-    //lets user input in name
     name: userName,
-    //score of game
     score: guesses,
   }
   //adds user information to score board
