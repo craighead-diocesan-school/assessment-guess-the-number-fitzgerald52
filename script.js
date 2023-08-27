@@ -4,7 +4,7 @@ userArray = [
   { name: 'Bella', score: 2 },
   { name: 'Cooper', score: 3 },
 ]
-//variables used within both functions
+//variables used within multipule functions
 let userName
 let userGuess
 userGuess = Number(userGuess)
@@ -93,7 +93,7 @@ function score() {
 
 function scoreBoard() {
   //shows name and score of every user in the array
-  for (let user of userArray) {
+  for (user of userArray) {
     alert(user.name + ', ' + user.score)
   }
 }
